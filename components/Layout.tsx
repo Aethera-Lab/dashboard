@@ -3,6 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { LogOut, LayoutDashboard, Sun, User as UserIcon } from 'lucide-react';
 import { UserRole } from '../types';
+import Logo from '/athera_logo.png'
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -26,8 +27,10 @@ const Layout: React.FC<LayoutProps> = ({ children, role, title }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Sun className="h-8 w-8 text-aethera-600" />
-              <span className="ml-2 text-xl font-bold text-slate-900 tracking-tight">Aethera</span>
+              <img 
+                src={Logo}
+                className="w-48 h-16"
+              />
               <span className="ml-2 px-2 py-0.5 text-xs font-semibold bg-slate-100 text-slate-500 rounded border border-slate-200 uppercase">
                 {role}
               </span>
