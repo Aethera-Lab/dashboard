@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Sun, Briefcase, TrendingUp, ShieldCheck } from 'lucide-react';
 import { Button, Card } from '../components/ui/UIComponents';
+import Logo from '/athera_logo.png'
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -11,7 +12,10 @@ const LandingPage: React.FC = () => {
       <div className="text-center mb-12">
         <div className="flex justify-center mb-4">
           <div className="bg-aethera-100 p-4 rounded-full">
-            <Sun className="h-16 w-16 text-aethera-600" />
+            <img 
+              src={Logo}
+              className="w-48 h-16"
+            />
           </div>
         </div>
         <h1 className="text-4xl font-extrabold text-slate-900 mb-2 tracking-tight">Welcome to Aethera</h1>
@@ -44,9 +48,11 @@ const LandingPage: React.FC = () => {
           <p className="text-slate-500 mb-6 flex-1">
             Discover vetted renewable energy projects and earn yields through tokenized assets.
           </p>
-          <Button className="w-full" variant="primary" onClick={() => navigate('/investor/login')}>
-            Start Investing
-          </Button>
+          <a href="https://aethera-app.vercel.app/">
+            <Button className="w-full" variant="primary">
+              Start Investing
+            </Button>
+          </a>
         </Card>
 
         {/* Admin */}
