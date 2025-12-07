@@ -38,9 +38,11 @@ const InvestorDashboard: React.FC = () => {
                             <ProgressBar current={project.currentFunding} total={project.fundingGoal} />
                             <div className="flex justify-between items-center">
                                 <StatusBadge status={project.status} />
-                                <Button size="sm" onClick={() => navigate(`/investor/project/${project.id}`)}>
-                                    View Project
-                                </Button>
+                                <a href="https://aethera-app.vercel.app/">
+                                    <Button size="sm">
+                                        View Project
+                                    </Button>
+                                </a>
                             </div>
                         </div>
                     </div>

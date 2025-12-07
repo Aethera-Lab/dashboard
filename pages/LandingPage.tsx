@@ -48,11 +48,11 @@ const LandingPage: React.FC = () => {
           <p className="text-slate-500 mb-6 flex-1">
             Discover vetted renewable energy projects and earn yields through tokenized assets.
           </p>
-          <a href="https://aethera-app.vercel.app/">
-            <Button className="w-full" variant="primary">
+          
+            <Button className="w-full" variant="primary" onClick={() => navigate('/investor/dashboard')}>
               Start Investing
             </Button>
-          </a>
+          
         </Card>
 
         {/* Admin */}
